@@ -1,0 +1,30 @@
+
+Использовал Criteria API для гибкой фильтрации данных, что позволило избежать избыточных джойнов и условий WHERE
+
+userProfile-service/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   ├── com/
+│   │   │   │   ├── example/
+│   │   │   │   │   ├── ProductServiceApplication.java       (Main Application Class)
+│   │   │   │   │   ├── core/                                (Ядро системы)
+│   │   │   │   │   │   ├── model/                           (Domain Models)
+│   │   │   │   │   │   ├── service/                         (Бизнес-логика)
+│   │   │   │   │   │   └── ports/                           (Порты - интерфейсы)
+│   │   │   │   │   ├── adapter/                             (Адаптеры)
+│   │   │   │   │   │   ├── persistence/                     (Адаптеры для работы с данными)
+│   │   │   │   │   │   │   └── JpaProductRepository.java    (JPA реализация порта)
+│   │   │   │   │   │   ├── web/                             (Адаптеры для REST API)
+│   │   │   │   │   │   │   └── ProductController.java       (REST контроллер)
+│   │   │   │   │   │   └── notification/                    (Адаптеры для уведомлений)
+│   │   │   │   │   └── config/                              (Конфигурация)
+│   │   │   ├── resources/
+│   │   │   │   ├── application.properties                   (Application Configuration)
+│   │   │   │   └── static/                                   (Static Resources)
+│   │   └── test/
+│   │       └── java/
+│   │           └── com/
+│   │               └── example/
+│   │                   └── adapter/                         (Тесты адаптеров)
+└── pom.xml                                                   (Maven Project Configuration)
